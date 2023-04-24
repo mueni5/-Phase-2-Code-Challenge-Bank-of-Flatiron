@@ -9,3 +9,5 @@ root.render(
     <h1>The Royal Bank of Flatiron</h1>
   </React.StrictMode>
 );
+
+export default Header;

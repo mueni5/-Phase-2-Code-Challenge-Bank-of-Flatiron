@@ -1,13 +1,13 @@
 import './App.css';
 import TransTable from './TransTable';
-import index from './index';
+import Header from './Header';
 
 function App() {
   return (
     <>
       <index/>
       <TransTable/>
-      <AddTransaction/>
+      
     </>
   );
   }

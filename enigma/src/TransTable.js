@@ -4,10 +4,10 @@ import './index.css'
 function TransTable() {
     const [data, setData] = useState('');
 
-   useEffect(() => {
-    fetch('http://localhost:3000/transactions')
-    .then(res => res.json())
-    .then(data => setData(data.map( (transaction) => {
+    useEffect(() => {
+     fetch('http://localhost:3000/transactions')
+      .then(res => res.json())
+      .then(data => setData(data.map( (transaction) => {
         //console.log(transaction)
         return (
             <tr key={transaction.id}>
@@ -19,21 +19,22 @@ function TransTable() {
         );
     })))}, [])
 
-//fillTable();
+ //fillTable();
     
-   }
-return (
-    <table>
-        <thread>
-             <tr>
+   
+ return (
+     <table>
+          <thread>
+              <tr>
                 <th>Dates</th>
                 <th>Descrition</th>
                 <th>Categories</th>
                 <th>Amount</th>
                 
-             </tr>
-        </thread>
-        <tbody>{data==='' ? <h2>loading</h2> : data}</tbody>
-       </table>
-);
+               </tr>
+            </thread>
+            <tbody>{data==='' ? <h2>loading</h2> : data}</tbody>
+      </table>
+      );
+};
 export default TransTable;
