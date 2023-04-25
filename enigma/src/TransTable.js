@@ -27,7 +27,7 @@ function TransTable() {
           <thread>
               <tr>
                 <th>Dates</th>
-                <th>Descrition</th>
+                <th>Description</th>
                 <th>Categories</th>
                 <th>Amount</th>
                 

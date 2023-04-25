@@ -9,6 +9,7 @@ root.render(
     <h1>The Royal Bank of Flatiron</h1>
   </React.StrictMode>
 );
+ 
 var settings = {
     "url": "localhost:3000/transactions/1",
     "method": "GET",
@@ -27,3 +28,16 @@ var settings = {
   $.ajax(settings).done(function (response) {
     console.log(response);
   });
+
+  var raw = "";
+
+var requestOptions = {
+  method: 'POST',
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("localhost:3000/transactions", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
